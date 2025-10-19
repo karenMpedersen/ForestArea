@@ -1,0 +1,116 @@
+# ----------------------------
+# Python / Jupyter basics
+# ----------------------------
+__pycache__/
+*.py[cod]
+*.ipynb_checkpoints/
+*.egg-info/
+*.log
+
+# ----------------------------
+# Virtual envs / local env files
+# ----------------------------
+.venv/
+.env
+.env.*
+
+# ----------------------------
+# Editors / OS cruft
+# ----------------------------
+.vscode/
+.DS_Store
+Thumbs.db
+
+# ----------------------------
+# Build / results (regenerate on demand)
+# ----------------------------
+results/
+outputs/
+
+# If you want images/docs in README, don't block them globally.
+# Comment these back in only if you really want to exclude all rendered artifacts:
+# *.html
+# *.png
+# *.pdf
+
+# ----------------------------
+# Data (block sensitive & large files)
+# ----------------------------
+# Block project raw data by default
+data/*
+# Allow small public demo files (must come AFTER the ignore)
+!README.md
+
+# If you need a public CSV demo, add it below and AFTER the global *.csv rule (see later):
+# !/data/example_public.csv
+
+# Common geospatial heavies
+*.tif
+*.tiff
+*.geotiff
+*.vrt
+*.img
+*.jp2
+*.sid
+*.aux
+*.ovr
+*.tfw
+*.prj
+*.tab
+*.gpkg
+*.geopackage
+*.gdb/
+*.sqlite
+*.kml
+*.kmz
+*.zip
+*.7z
+*.rar
+
+# ----------------------------
+# Earth Engine & GIS caches (repo-relative only)
+# ----------------------------
+.earthengine/
+.geemap/
+.qgis2/
+.qgis3/
+
+# ----------------------------
+# Temporary / intermediate
+# ----------------------------
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+*.old
+
+# ----------------------------
+# Secrets (DO NOT COMMIT real secrets)
+# ----------------------------
+# Keep the template COMMITTED so collaborators know the keys:
+# do NOT ignore secrets.template.json
+# secrets.template.json
+
+*.pem
+*.p12
+*.key
+*.crt
+*.creds
+*.credentials
+token.json
+.oauth*
+ForestArea_Local.ipynb
+EcuadorStudyArea_Sentinel2_L2A.json
+# ----------------------------
+# Global data patterns (be careful!)
+# ----------------------------
+*.csv
+*.xlsx
+
+# Re-allow any demo CSVs AFTER the global rule:
+#/data/example_public.csv
+
+# Optional: whitelist specific result/fig readme stubs
+!/results/README.md
+!/figs/README.md
